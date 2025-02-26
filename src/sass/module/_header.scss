@@ -1,0 +1,43 @@
+@use "global" as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  right: rem(20);
+  z-index: 9999;
+  
+}
+
+.header__inner {
+  position: relative;
+  top: rem(40);
+}
+
+.header__hum {
+  margin-bottom: rem(93);
+}
+
+.header__reservation {
+  position: relative;
+}
+
+.header__reservation::before{
+  content: "";
+  width: rem(40);
+  height: 1px;
+  background-color: #C5CBC0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.header__reservation a{
+  font-size: rem(14);
+  font-family: $yumin;
+  color: #C5CBC0;
+  writing-mode: vertical-rl;
+  letter-spacing: 1em;
+  line-height: rem(40);
+  font-weight: 500;
+  padding-bottom: rem(40);
+}
