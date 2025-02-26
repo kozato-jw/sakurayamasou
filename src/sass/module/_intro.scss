@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.intro{
+
+}
+
+.intro__text{
+  font-size: rem(14);
+  writing-mode: vertical-rl;
+  line-height: rem(56);
+  margin-left: auto;
+  margin-right: auto;
+  letter-spacing: 0.7em;
+}

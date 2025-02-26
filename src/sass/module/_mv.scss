@@ -1,0 +1,33 @@
+@use "global" as *;
+
+.mv {
+  position: relative;
+}
+
+.mv__logo-wrapper {
+  position: absolute;
+  top: 44.8%;
+  left: 50%;
+  transform: translate(-50%, -44.8%);
+  text-align: center;
+}
+
+.mv__logo-icon {
+  width: rem(83);
+  margin-bottom: rem(34);
+  display: inline-block;
+}
+
+.mv__logo-text {
+  width: rem(160);
+}
+
+.mv__image {
+  height: 100vh;
+}
+
+.mv__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
