@@ -5,9 +5,15 @@
   line-height: calc(32 / 14);
   letter-spacing: 0.2857em;
   padding-bottom: rem(10);
-  padding-right: rem(52);
-  border-bottom: 1px solid #5E5E5E;
+  border-bottom: 1px solid $black;
   position: relative;
+  display: block;
+  @include mq(md) {
+      font-size: rem(12);
+      line-height: calc(32 / 12);
+      letter-spacing: 0.33em;
+      padding-bottom: rem(2);
+  }
 }
 
 .btn::after{
@@ -19,6 +25,10 @@
   height: rem(8);
   position: absolute;
   right: 0;
-  top: 30%;
-  transform: translateY(-30%);
+  top: 35%;
+  transform: translateY(-35%);
+  @include mq(md) {
+      top: 40%;
+      transform: translateY(-40%);
+  }
 }

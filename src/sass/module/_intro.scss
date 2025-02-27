@@ -11,4 +11,10 @@
   margin-left: auto;
   margin-right: auto;
   letter-spacing: 0.7em;
+  @include mq(md) {
+      font-size: rem(12); 
+      // line-height: rem(36);
+      line-height: min(7.5vw,rem(36));
+      letter-spacing: 0.1em;
+  }
 }

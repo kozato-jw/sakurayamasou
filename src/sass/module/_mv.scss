@@ -6,24 +6,36 @@
 
 .mv__logo-wrapper {
   position: absolute;
-  top: 44.8%;
+  top: 54%;
   left: 50%;
-  transform: translate(-50%, -44.8%);
+  transform: translate(-50%, -54%);
   text-align: center;
+  @include mq(md) {
+      top: 50%;
+      transform: translate(-50%, -50%);
+  }
 }
 
 .mv__logo-icon {
   width: rem(83);
-  margin-bottom: rem(34);
+  margin-bottom: rem(28);
   display: inline-block;
+  @include mq(md) {
+    width: rem(41);
+    margin-bottom: rem(11);
+  }
 }
 
 .mv__logo-text {
   width: rem(160);
+  @include mq(md) {
+      width: rem(80);
+  }
 }
 
 .mv__image {
   height: 100vh;
+  // display: block;
 }
 
 .mv__image img {

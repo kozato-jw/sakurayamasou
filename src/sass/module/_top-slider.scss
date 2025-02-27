@@ -1,0 +1,23 @@
+@use "global" as *;
+
+.top-slider {
+  .swiper-container{
+    max-width: rem(1200);
+    padding-right: rem(25);
+    padding-left: rem(25);
+    margin-left: auto;
+    margin-right: auto;
+      @include mq(md) {
+        max-width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+      }
+  }
+  .swiper-slide img{
+    aspect-ratio: 560/373;
+    object-fit: cover;
+    @include mq(md) {
+        aspect-ratio: 371/247;
+    }
+  }
+}

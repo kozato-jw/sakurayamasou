@@ -2,4 +2,7 @@
 
 .l-top-slider{
   margin-bottom: rem(303);
+  @include mq(md) {
+      margin-bottom: rem(123);
+  }
 }

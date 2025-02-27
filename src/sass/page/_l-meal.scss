@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-meal{
+  margin-bottom: rem(222);
+  @include mq(md) {
+      margin-bottom: rem(140);
+  }
+}
