@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
@@ -10,14 +11,14 @@
   <meta name="description" content="" />
   <meta name="keywords" content="" />
   <!-- ogp -->
-  <meta property="og:title" content="" />
+  <!-- <meta property="og:title" content="" />
   <meta property="og:type" content="" />
   <meta property="og:url" content="" />
   <meta property="og:image" content="" />
   <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
+  <meta property="og:description" content="" /> -->
   <!-- ファビコン -->
-  <link rel="icon" href="" />
+  <link rel="icon" href="./assets/images/common/favicon.ico" />
   <!-- Googleフォント -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,12 +27,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script defer src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script defer src="./assets/js/script.js"></script>
 </head>
-<body>
 
+<body>
   <header class="header">
     <div class="header__inner">
       <div class="header__hum hum">
@@ -40,96 +41,129 @@
         <span class="hum__bar"></span>
       </div>
       <div class="header__reservation">
-        <a href="#">ご予約はこちら</a>
+        <a href="#" target="_blank">ご予約はこちら</a>
       </div>
     </div>
   </header>
   <main>
-
     <div class="mv l-mv">
       <div class="mv__logo-wrapper">
         <div class="mv__logo-icon">
           <img src="./assets/images/common/logo.png" alt="oyado桜山荘のロゴマーク">
         </div>
-        <div class="mv__logo-text">
+        <h1 class="mv__logo-text">
           <img src="./assets/images/common/logo_text.png" alt="oyado桜山荘">
-        </div>
+        </h1>
       </div>
       <div class="mv__image">
-        <img src="./assets/images/common/mv.jpg" alt="桜山荘の写真">
+        <picture>
+          <source srcset="./assets/images/common/mv.jpg" media="(min-width: 768px)">
+          <img src="./assets/images/common/mv_sp.jpg" alt="桜山荘の写真">
+        </picture>
       </div>
       <div class="mv__scroll scroll-indicator">
         <div class="scroll-indicator__circle"></div>
         <div class="scroll-indicator__line"></div>
       </div>
     </div>
-
     <div class="intro l-intro">
       <div class="inner">
-        <p class="intro__text">
-          幽玄の美に包まれる昂揚。<br>
-          春の鶯、夏の風鈴、<br>
-          秋の虫音、冬の木枯らし。<br>
-          移ろう季節の囁きが、<br>
-          朧げな灯りに溶け込む。<br>
-          歴史感じる風雅と三河の什器が紡ぐ空間で<br>
-          愛しき人と過ごす珠玉の時間。<br>
-          ここ桜山荘で、至福の逗留を。
-        </p>
+        <p class="intro__text"> 懐かしさに包まれた隠れ家が<br> あなたをそっとお迎えします。<br> かすかな灯りが照らし出す<br> 古き良き佇まいの中<br> 安らぎに満ちた温もりと<br>
+          優しく溶け込むまどろみを感じながら<br> ここ「桜山荘」で<br> 和の趣に浸りつつ<br> しっとりと流れる憩いの時間を<br> 過ごしませんか。 </p>
       </div>
     </div>
-
     <div class="top-slider l-top-slider">
-      <div class="inner">
-        <div class="swiper-container">
-          <div class="swiper top-slider__swiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide top-slider__image">
-                  <img src="./assets/images/common/slide_1.jpg" alt="桜山荘の写真">
-                </div>
-                <div class="swiper-slide top-slider__image">
-                  <img src="./assets/images/common/slide_2.jpg" alt="桜山荘の写真">
-                </div>
-                <div class="swiper-slide top-slider__image">
-                  <img src="./assets/images/common/slide_3.jpg" alt="桜山荘の写真">
-                </div>
-                <div class="swiper-slide top-slider__image">
-                  <img src="./assets/images/common/slide_4.jpg" alt="桜山荘の写真">
-                </div>
-                <div class="swiper-slide top-slider__image">
-                  <img src="./assets/images/common/slide_5.jpg" alt="桜山荘の写真">
-                </div>
-                <div class="swiper-slide top-slider__image">
-                  <img src="./assets/images/common/slide_6.jpg" alt="桜山荘の写真">
-                </div>
-              </div>
+      <div class="swiper-container">
+        <div class="swiper top-slider__swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide top-slider__image">
+              <img src="./assets/images/common/slide_1.jpg" alt="桜山荘の写真" loading="lazy">
             </div>
+            <div class="swiper-slide top-slider__image">
+              <img src="./assets/images/common/slide_2.jpg" alt="桜山荘の写真" loading="lazy">
+            </div>
+            <div class="swiper-slide top-slider__image">
+              <img src="./assets/images/common/slide_3.jpg" alt="桜山荘の写真" loading="lazy">
+            </div>
+            <div class="swiper-slide top-slider__image">
+              <img src="./assets/images/common/slide_4.jpg" alt="桜山荘の写真" loading="lazy">
+            </div>
+            <div class="swiper-slide top-slider__image">
+              <img src="./assets/images/common/slide_5.jpg" alt="桜山荘の写真" loading="lazy">
+            </div>
+            <div class="swiper-slide top-slider__image">
+              <img src="./assets/images/common/slide_6.jpg" alt="桜山荘の写真" loading="lazy">
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
-    <div class="top-content l-top-content">
+    <div class="meal l-meal">
       <div class="inner">
-        <div class="top-content__inner">
-          <div class="top-content__text-area">
-            <h2 class="top-content__title-ja">お食事</h2>
-            <p class="top-content__title-en">meal</p>
-            <p class="top-content__text">当宿の敷地内にあるパティシエシェフが営むデザートレストラン「LE DESSERT」<br>
-            レストランをご予約いただいた方には、特別な宿泊プランと宿での朝食をサービスさせていただいています。</p>
-            <div class="top-content__btn">
-              <a href="#" class="btn">お食事についてのお問い合わせ</a>
+        <div class="meal__inner">
+          <div class="meal__text-area">
+            <h2 class="meal__title-ja">お食事</h2>
+            <p class="meal__title-en">meal</p>
+            <p class="meal__text">当宿の敷地内にあるパティシエシェフが営むデザートレストラン「LE DESSERT」<br class="u-desktop">
+              レストランをご予約いただいた方には、特別な宿泊プランと宿での朝食をサービスさせていただいています。</p>
+            <div class="meal__btn">
+              <a href="https://line.me/R/ti/p/@073jweak" class="btn" target="_blank">お食事についてのお問い合わせ</a>
             </div>
           </div>
-          <div class="top-content__image">
+          <div class="meal__image">
             <img src="./assets/images/common/meal.jpg" alt="桜山荘の食事の写真">
           </div>
         </div>
       </div>
     </div>
-
+    <div class="access l-access">
+      <div class="inner">
+        <div class="access__inner">
+          <div class="access__text-area">
+            <h2 class="access__title-ja">アクセス</h2>
+            <p class="access__title-en">access</p>
+            <p class="access__text">〒466-0845<br>愛知県名古屋市昭和区藤成通２丁目７−２</p>
+            <div class="access__btn">
+              <a href="https://www.google.com/maps/place/oyado+%E6%A1%9C%E5%B1%B1%E8%8D%98/@35.1414506,136.9390927,17z/data=!3m1!4b1!4m6!3m5!1s0x60037b8c3076dccb:0x1345540167c91d0f!8m2!3d35.1414506!4d136.9390927!16s%2Fg%2F11wy91wdc7?entry=ttu&g_ep=EgoyMDI1MDIyMy4xIKXMDSoASAFQAw%3D%3D"
+                class="btn" target="_blank">桜山荘までの地図</a>
+            </div>
+          </div>
+          <div class="access__image">
+            <picture>
+              <source srcset="./assets/images/common/access.jpg" media="(min-width: 768px)">
+              <img src="./assets/images/common/access_sp.jpg" alt="桜山荘の外観写真">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
-  <footer>
-
+  <footer class="footer">
+    <div class="inner">
+      <div class="footer__logo-wrapper">
+        <div class="footer__logo-icon">
+          <a href="#">
+            <img src="./assets/images/common/logo.png" alt="oyado桜山荘のロゴマーク">
+          </a>
+        </div>
+        <div class="footer__logo-text">
+          <a href="#">
+            <img src="./assets/images/common/logo_text.png" alt="oyado桜山荘">
+          </a>
+        </div>
+      </div>
+      <div class="footer__address-wrapper">
+        <div class="footer__address-logo u-desktop">
+          <img src="./assets/images/common/logo_text.png" alt="oyado桜山荘">
+        </div>
+        <p class="footer__address">〒466-0845<br>愛知県名古屋市昭和区藤成通2丁目7−2</p>
+      </div>
+      <div class="footer__sns">
+        <a href="https://www.instagram.com/oyado_sakurayamaso?igsh=dWZreHJtdTNpcnNt" target="_blank">
+          <img src="./assets/images/common/icon_insta.png" alt="インスタグラムのアイコン">
+        </a>
+      </div>
+    </div>
   </footer>
 </body>
 

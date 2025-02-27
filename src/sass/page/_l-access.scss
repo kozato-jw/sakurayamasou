@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-access{
+  margin-bottom: rem(227);
+  @include mq(md) {
+      margin-bottom: rem(92);
+  }
+}

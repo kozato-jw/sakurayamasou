@@ -1,5 +1,8 @@
 @use "global" as *;
 
 .l-mv{
-  margin-bottom: rem(243);
+  margin-bottom: rem(248);
+  @include mq(md) {
+      margin-bottom: rem(100);
+  }
 }

@@ -1,15 +1,16 @@
 @use "global" as *;
 
-/* スクロールインジケーターの親コンテナ */
 .scroll-indicator {
   position: absolute;
   bottom: rem(-93);
-  /* MVの最下部に設置（適宜調整） */
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include mq(md) {
+      bottom: rem(-56);
+  }
 }
 
 /* 丸い部分 */
@@ -19,15 +20,21 @@
   background-color: #C5CAC1;
   border-radius: 50%;
   margin-bottom: rem(17);
+  @include mq(md) {
+      margin-bottom: rem(15);
+  }
 }
 
 /* 棒の部分 */
 .scroll-indicator__line {
   width: 1px;
   height: rem(185);
-  background-color: #C5CAC1;
+  background-color: #C5CAC166;
   position: relative;
   overflow: hidden;
+  @include mq(md) {
+      height: rem(112);
+  }
 }
 
 /* 流れるアニメーション */
@@ -39,7 +46,7 @@
   width: 100%;
   height: 100%;
   background-color: #C5CAC1;
-  animation: scroll-animation 2s infinite linear;
+  animation: scroll-animation 3s infinite linear;
 }
 
 /* アニメーション定義 */
