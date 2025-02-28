@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.intro{
-
-}
-
 .intro__text{
   font-size: rem(14);
   writing-mode: vertical-rl;
@@ -12,8 +8,7 @@
   margin-right: auto;
   letter-spacing: 0.7em;
   @include mq(md) {
-      font-size: rem(12); 
-      // line-height: rem(36);
+      font-size: rem(11); 
       line-height: min(7.5vw,rem(36));
       letter-spacing: 0.1em;
   }
