@@ -6,15 +6,18 @@
   right: rem(20);
   z-index: 9999;
   @include mq(md) {
-      right: rem(10);
+      right: rem(8);
+      width: rem(40);
+      height: 100%;
   }
 }
 
 .header__inner {
-  position: relative;
-  top: rem(40);
+  // position: relative;
+  // top: rem(40);
+  // z-index: 9999;
   @include mq(md) {
-      top: rem(13);
+      // top: rem(13);
   }
 }
 
@@ -29,17 +32,25 @@
   position: relative;
   width: rem(40);
   text-align: center;
+
   @include mq(md) {
-    width: rem(20);
+    width: rem(40);
     position: fixed;
-    top: rem(48);
-    right: rem(10);
+    top: rem(125);
+    // right: rem(10);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
   }
 }
-.header__reservation.is-visible {
+// .header__reservation.is-visible {
+//   @include mq(md) {
+//     opacity: 1;
+//     visibility: visible;
+//   }
+// }
+
+.header__reservation.is-active{
   @include mq(md) {
     opacity: 1;
     visibility: visible;
@@ -55,10 +66,14 @@
   bottom: 0;
   right: 0;
   @include mq(md) {
-      width: rem(15);
-      right: 50%;
-      transform: translateX(50%);
+    width: rem(15);
+    right: 50%;
+    transform: translateX(50%);
   }
+}
+
+.header__reservation.is-active::before{
+  background-color: #5e5e5e;
 }
 
 .header__reservation a{
@@ -72,12 +87,21 @@
   display: inline-block;
   font-weight: 500;
   padding-bottom: rem(46);
+  transition: 0.3s ease-in-out;
   @include mq(md) {
-      font-size: rem(10);
-      font-family: $noto;
-      // line-height: rem(20);
-      // line-height: 1;
-      padding-bottom: rem(12);
-  letter-spacing: 0.8em;
+    font-size: rem(10);
+    font-family: $noto;
+    padding-bottom: rem(12);
+    letter-spacing: 0.8em;
+    padding: 0 rem(14);
   }
+}
+
+.header__reservation.is-active a{
+  color: #5e5e5e;
+} 
+
+/* 予約ボタンの非表示 */
+.header__reservation.is-hidden {
+  display: none;
 }

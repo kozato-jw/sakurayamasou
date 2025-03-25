@@ -16,6 +16,13 @@
   }
 }
 
+.btn--hum{
+  display: inline-block;
+  color: $beige;
+  border-color: $beige;
+  padding-right: rem(20);
+}
+
 .btn::after{
   content: "";
   background-image: url('../images/common/btn_arrow.png');
@@ -31,4 +38,8 @@
       top: 40%;
       transform: translateY(-40%);
   }
+}
+
+.btn--hum::after{
+  background-image: url('../images/common/btn_arrow_beige.png');
 }

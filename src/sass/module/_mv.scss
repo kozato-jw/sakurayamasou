@@ -36,6 +36,9 @@
 .mv__image {
   height: 100vh;
   // display: block;
+  @include mq(md) {
+      height: 80vh;
+  }
 }
 
 .mv__image img {
