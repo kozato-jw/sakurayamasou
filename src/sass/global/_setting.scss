@@ -38,6 +38,12 @@ body {
   background-color: #F8F8F8;
 }
 
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+  /* メニューオープン時はbody側スクロール禁止 */
+}
+
 a{
   transition: 0.3s;
 }
