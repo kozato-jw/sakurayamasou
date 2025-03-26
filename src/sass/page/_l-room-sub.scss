@@ -1,0 +1,8 @@
+@use "global" as *;
+
+.l-room-sub{
+  margin-bottom: rem(210);
+  @include mq(md) {
+      margin-bottom: rem(144);
+  }
+}

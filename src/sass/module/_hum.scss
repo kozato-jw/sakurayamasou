@@ -43,14 +43,14 @@
   transition: all 0.3s ease-in-out;
   pointer-events: none;
   @include mq(md) {
-    background-color: #5e5e5e;
+    background-color: $black;
     transition:  0.5s ease-in-out;
   }
 }
 
 //　MVより下での三本線の色
 .hum.is-active .hum__bar{
-  background-color: #5e5e5e;
+  background-color: $black;
 }
 
 // メニューオープン時のバツの色

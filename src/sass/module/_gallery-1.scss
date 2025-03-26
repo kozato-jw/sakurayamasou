@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.gallery-1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(50);
+  margin-bottom: rem(50);
+}
+
+.gallery-1__image:nth-of-type(3n+1) {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.gallery-1__image:nth-of-type(3n+2),
+.gallery-1__image:nth-of-type(3n) {
+  grid-column: span 1;
+  grid-row: span 1;
+}
+
+.gallery-1__image img {
+  object-fit: cover;
+}
+
+.gallery-1__image:nth-of-type(3n+1) img {
+  aspect-ratio: 515 / 628;
+}
+
+.gallery-1__image:nth-of-type(3n+2) img {
+  aspect-ratio: 515 / 272;
+}
+
+.gallery-1__image:nth-of-type(3n) img {
+  aspect-ratio: 515 / 306;
+}
