@@ -73,7 +73,7 @@
 }
 
 .header__reservation.is-active::before{
-  background-color: #5e5e5e;
+  background-color: $black;
 }
 
 .header__reservation a{
@@ -98,7 +98,7 @@
 }
 
 .header__reservation.is-active a{
-  color: #5e5e5e;
+  color: $black;
 } 
 
 /* 予約ボタンの非表示 */
