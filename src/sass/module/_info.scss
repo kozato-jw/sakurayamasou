@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.info{
+
+}
+
+.info__list-wrapper{
+  margin-bottom: rem(212);
+  @include mq(md) {
+      margin-bottom: rem(152);
+  }
+}

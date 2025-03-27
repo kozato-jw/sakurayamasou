@@ -4,13 +4,24 @@
 
 }
 
-
+.room-sub__gallery{
+  margin-bottom: rem(50);
+  @include mq(md) {
+    margin-bottom: rem(32);
+  }
+}
 
 .room-sub__text {
   font-size: rem(14);
-  line-height: calc(30/14);
+  line-height: 2.143;
   letter-spacing: rem(4);
   text-align: center;
   max-width: rem(775);
   margin: 0 auto;
+  @include mq(md) {
+    font-size: rem(13);
+    line-height: calc(30/13);
+    letter-spacing: rem(3);
+    max-width: 100%;
+  }
 }

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .l-top-slider{
-  margin-bottom: rem(303);
+  margin-bottom: rem(320);
   @include mq(md) {
       margin-bottom: rem(123);
   }

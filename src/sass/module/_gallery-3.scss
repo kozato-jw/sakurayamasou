@@ -5,7 +5,11 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   gap: rem(50);
-  margin-bottom: rem(50);
+    @include mq(md) {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16);
+      }
 }
 
 .gallery-3__image:nth-of-type(3n+1){

@@ -17,25 +17,24 @@
 }
 
 .mv__logo-icon {
-  width: rem(83);
-  margin-bottom: rem(28);
+  width: rem(91);
+  margin-bottom: rem(10);
   display: inline-block;
   @include mq(md) {
-    width: rem(41);
-    margin-bottom: rem(11);
+    width: rem(57);
+    margin-bottom: rem(14);
   }
 }
 
 .mv__logo-text {
-  width: rem(160);
+  width: rem(179);
   @include mq(md) {
-      width: rem(80);
+      width: rem(111);
   }
 }
 
 .mv__image {
   height: 100vh;
-  // display: block;
   @include mq(md) {
       height: 80vh;
   }
