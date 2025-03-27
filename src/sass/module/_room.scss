@@ -13,7 +13,7 @@
   margin-right: auto;
     @include mq(md) {
         flex-direction: column-reverse;
-        gap: rem(48);
+        gap: rem(44);
       }
 }
 
@@ -61,14 +61,14 @@
 
 .room__text {
   font-size: rem(14);
-  line-height: calc(32 / 14);
+  line-height: 2.143;
   letter-spacing: 0.2857em;
   margin-bottom: rem(44);
   @include mq(md) {
       font-size: rem(12);
-      line-height: calc(32 / 12);
+      line-height: 2.5;
       letter-spacing: 0.33em;
-      margin-bottom: rem(33);
+      margin-bottom: rem(42);
       word-break: break-all;
   }
 }
@@ -91,6 +91,6 @@
   aspect-ratio: 450/300;
   object-fit: cover;
   @include mq(md) {
-      aspect-ratio: 350/227;
+      aspect-ratio: 350/233;
   }
 }

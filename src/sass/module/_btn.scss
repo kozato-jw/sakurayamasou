@@ -42,4 +42,8 @@
 
 .btn--hum::after{
   background-image: url('../images/common/btn_arrow_beige.png');
+  top: 38%;
+  @include mq(md) {
+      top: 48%;
+  }
 }

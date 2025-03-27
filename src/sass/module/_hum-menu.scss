@@ -9,27 +9,28 @@
   right: -100%;
   transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
   opacity: 0;
-  visibility: hidden;
+  visibility: hidden; // 初期状態で非表示
+
   @include mq(md) {
-      width: 100%;
+    width: 100%;
+    overflow-y: scroll;
   }
 }
 
 /* メニューがアクティブなとき */
 .hum-menu.is-active {
-  visibility: visible;
-  right: 0;
-  opacity: 1;
+  visibility: visible; // 開いたときに表示
 }
 
 .hum-menu__inner {
-  margin-top: 21.77%;
+  margin-top: 31%;
   margin-left: 16%;
   margin-right: 25%;
   @include mq(md) {
-      margin-top: 13%;
+      margin-top: 29%;
         margin-left: 13%;
         margin-right: 5%;
+        margin-bottom: 5%;
   }
 }
 
@@ -38,7 +39,7 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   gap: rem(64) rem(28);
-  margin-bottom: rem(64);
+  margin-bottom: rem(61);
   @include mq(md) {
     gap: rem(40) 0;
     margin-bottom: rem(55);
@@ -74,6 +75,7 @@ grid-area: 2 / 2 / 3 / 3;
   width: rem(3);
   height: rem(3);
   background-color: $beige;
+  border-radius: 50%;
   position: absolute;
   left: 0;
   top: 50%;
@@ -81,7 +83,7 @@ grid-area: 2 / 2 / 3 / 3;
 }
 
 .hum-menu__btn {
-  margin-bottom: rem(64);
+  margin-bottom: rem(61);
   @include mq(md) {
       margin-bottom: rem(55);
   }
@@ -97,7 +99,7 @@ grid-area: 2 / 2 / 3 / 3;
 .hum-menu__access {
   margin-bottom: rem(106);
   @include mq(md) {
-      margin-bottom: rem(65);
+      margin-bottom: rem(58);
   }
 }
 
@@ -115,6 +117,7 @@ grid-area: 2 / 2 / 3 / 3;
   content: "";
   width: rem(3);
   height: rem(3);
+  border-radius: 50%;
   background-color: $beige;
   position: absolute;
   left: 0;
@@ -141,6 +144,9 @@ grid-area: 2 / 2 / 3 / 3;
   align-items: center;
   gap: rem(9);
   margin-left: rem(15);
+  @include mq(md) {
+      margin-left: rem(6);
+  }
 }
 
 .hum-menu__logo {

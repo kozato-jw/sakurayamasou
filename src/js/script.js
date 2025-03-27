@@ -1,7 +1,5 @@
 
-jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
-
-
+jQuery(function ($) {
 
 // トップページ・スライダー
 //-----------------------------------------
@@ -25,14 +23,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
   });
 
 
-// ハンバーガーメニューとサイド固定メニューをクラス名で制御
+
+// ハンバーガーメニューとサイド固定メニューの動き
 //（MVを越えたら色変更や表示非表示など）
 //-----------------------------------------
 $(() => {
   const $hum = $(".hum"); // ハンバーガーボタン
   const $humMenu = $(".hum-menu"); // ハンバーガーメニュー
   const $reservation = $(".header__reservation"); // 予約ボタン
-  const $mv = $(".mv"); // メインビジュアル
+  const $mv = $(".mv, .mv-sub"); // メインビジュアル（下層ページも対応）
   const $targets = $(".header__reservation, .hum"); // スクロールで色変更する要素
   const $body = $("body"); // スクロール制御用
 
@@ -41,12 +40,17 @@ $(() => {
     const isActive = $humMenu.hasClass("is-active");
 
     if (isActive) {
-      // メニューを閉じる
-      $humMenu.removeClass("is-active");
-      $body.removeClass("no-scroll"); // スクロール許可
+      // メニューを閉じる（スライドアウト & フェードアウト）
+      $humMenu.css({ right: "-100%", opacity: 0 });
+
+      // アニメーション後にクラスを削除
+      setTimeout(() => {
+        $humMenu.removeClass("is-active");
+        $body.removeClass("no-scroll"); // スクロール許可
+      }, 500); // CSSのtransition時間と合わせる
     } else {
       // メニューを開く
-      $humMenu.addClass("is-active");
+      $humMenu.addClass("is-active").css({ right: "0", opacity: 1 });
       $body.addClass("no-scroll"); // スクロール禁止
     }
 
@@ -56,6 +60,8 @@ $(() => {
 
   /** MV下端を超えたら色変更 */
   function checkMvPosition() {
+    if ($mv.length === 0) return; // .mv, .mv-sub がない場合は処理しない
+
     const mvBottom = $mv.offset().top + $mv.outerHeight();
     const headerReservationBottom = $reservation.offset().top + $reservation.outerHeight();
 
@@ -66,32 +72,33 @@ $(() => {
     }
   }
 
-  // ハンバーガーメニューのクリックイベント
+  // ハンバーガーメニューのクリックイベント（開閉）
   $hum.on("click", (event) => {
     event.stopPropagation();
     handleMenuToggle();
   });
 
-  // メニュー内のクリックで閉じないようにする
-  $humMenu.on("click", (event) => event.stopPropagation());
+  // **メニューのどこかをクリックしたら閉じる**
+  $humMenu.on("click", (event) => {
+    const isLink = $(event.target).is("a"); // クリックされた要素がリンクか
+    const isCloseButton = $(event.target).closest(".hum-menu__close").length > 0; // 閉じるボタンか
 
-  // ドキュメントのどこかをクリックするとメニューを閉じる
-  $(document).on("click", () => {
-    if ($humMenu.hasClass("is-active")) {
+    if (isLink || isCloseButton || $(event.target).is(".hum-menu")) {
+      handleMenuToggle();
+    }
+  });
+
+  // **ドキュメントのどこかをクリックしたら閉じる**
+  $(document).on("click", (event) => {
+    if (!$(event.target).closest(".hum-menu, .hum").length && $humMenu.hasClass("is-active")) {
       handleMenuToggle();
     }
   });
 
   // スクロールでMVを超えたら色変更
   $(window).on("scroll", checkMvPosition);
-  checkMvPosition(); // 初回実行
+  checkMvPosition();
 });
-
-
-
-
-
-
 
 
 
