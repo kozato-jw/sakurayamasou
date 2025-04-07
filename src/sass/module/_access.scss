@@ -90,6 +90,7 @@
   aspect-ratio: 382/520;
   object-fit: cover;
   @include mq(md) {
-      aspect-ratio: 350/228;
+      // aspect-ratio: 350/228;
+      aspect-ratio: auto;
   }
 }
