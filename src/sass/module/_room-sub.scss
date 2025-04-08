@@ -1,9 +1,5 @@
 @use "global" as *;
 
-.room-sub {
-
-}
-
 .room-sub__gallery{
   margin-bottom: rem(50);
   @include mq(md) {
