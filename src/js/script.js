@@ -1,4 +1,3 @@
-
 jQuery(function ($) {
 
 // トップページ・スライダー
@@ -31,7 +30,7 @@ $(() => {
   const $hum = $(".hum"); // ハンバーガーボタン
   const $humMenu = $(".hum-menu"); // ハンバーガーメニュー
   const $reservation = $(".header__reservation"); // 予約ボタン
-  const $mv = $(".mv, .mv-sub"); // メインビジュアル（下層ページも対応）
+  const $mv = $(".mv, .page-head"); // メインビジュアル（下層ページも対応）
   const $targets = $(".header__reservation, .hum"); // スクロールで色変更する要素
   const $body = $("body"); // スクロール制御用
 
@@ -60,7 +59,7 @@ $(() => {
 
   /** MV下端を超えたら色変更 */
   function checkMvPosition() {
-    if ($mv.length === 0) return; // .mv, .mv-sub がない場合は処理しない
+    if ($mv.length === 0) return; // .mv, .page-head がない場合は処理しない
 
     const mvBottom = $mv.offset().top + $mv.outerHeight();
     const headerReservationBottom = $reservation.offset().top + $reservation.outerHeight();
@@ -102,6 +101,6 @@ $(() => {
 
 
 
-}); //冒頭の閉じ
+});
 
 
