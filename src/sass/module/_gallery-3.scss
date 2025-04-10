@@ -4,7 +4,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
-  gap: rem(50);
+  gap: rem(16);
     @include mq(md) {
         display: flex;
         flex-direction: column;
@@ -34,13 +34,13 @@
 }
 
 .gallery-3__image:nth-of-type(3n+1) img {
-  aspect-ratio: 515 / 272;
+  aspect-ratio: 532 / 280;
 }
 
 .gallery-3__image:nth-of-type(3n+2) img {
-  aspect-ratio: 515 / 306;
+  aspect-ratio: 532 / 314;
 }
 
 .gallery-3__image:nth-of-type(3n) img {
-  aspect-ratio: 515 / 628;
+  aspect-ratio: 532 / 610;
 }
