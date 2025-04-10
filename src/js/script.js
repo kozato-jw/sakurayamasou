@@ -5,7 +5,7 @@ jQuery(function ($) {
   new Swiper(".top-slider__swiper", {
     loop: true,
     slidesPerView: 1.156,
-    spaceBetween: 10,
+    spaceBetween: 16,
     centeredSlides: true,
     autoplay: {
       delay: 4000,
@@ -16,7 +16,7 @@ jQuery(function ($) {
     breakpoints: {
         767: {
           slidesPerView: 2.113,
-          spaceBetween: 15,
+          spaceBetween: 16,
         },
   }
   });

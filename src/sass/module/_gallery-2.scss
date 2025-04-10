@@ -3,8 +3,9 @@
 .gallery-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: rem(229) rem(50) rem(350) rem(50) rem(98) rem(50) rem(272);
-  gap: 0 rem(50);
+  grid-template-rows: rem(231) rem(16) rem(367) rem(16) rem(121) rem(16) rem(275);
+  // gap: 0 rem(50);
+  gap: 0 rem(16);
     @include mq(md) {
         display: flex;
         flex-direction: column;
@@ -42,21 +43,21 @@
 }
 
 .gallery-2__image:first-of-type img {
-  aspect-ratio: 515 / 229;
+  aspect-ratio: 532 / 231;
 }
 
 .gallery-2__image:nth-of-type(2) img {
-  aspect-ratio: 515 / 498;
+  aspect-ratio: 532 / 503;
 }
 
 .gallery-2__image:nth-of-type(3) img {
-  aspect-ratio: 515 / 272;
+  aspect-ratio: 532 / 275;
 }
 
 .gallery-2__image:nth-of-type(4) img {
-  aspect-ratio: 515 / 628;
+  aspect-ratio: 532 / 614;
 }
 
 .gallery-2__image:last-of-type img {
-  aspect-ratio: 515 / 421;
+  aspect-ratio: 532 / 412;
 }

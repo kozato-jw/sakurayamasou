@@ -1,18 +1,14 @@
 @use "global" as *;
 
-
-
-.info-list {}
-
 .info-list__title {
   font-size: rem(24);
   line-height: 2.45;
   margin-bottom: rem(20);
+  letter-spacing: 0.05em;
   border-bottom: 1px solid $black;
   @include mq(md) {
     font-size: rem(20);
     line-height: 1;
-    letter-spacing: 0.05em;
     padding-bottom: rem(13);
   }
 }
